@@ -1,0 +1,12 @@
+<ng-container *ngIf="toDoList.length>0;else noTask">
+  <ul *ngFor="let item of toDoList | sort">
+    <li appGetDate [date]='item.created'>
+      {{item.name|transformTask:'!'}}
+      <button class='btn btn-warning' (click)="remove(item)">Usuń</button>
+      <button class='btn btn-success' (click)="done(item)">Zrobione</button>
+    </li>
+  </ul>
+</ng-container>
+<ng-template #noTask>
+  <p>Brak Zadań</p>
+</ng-template>

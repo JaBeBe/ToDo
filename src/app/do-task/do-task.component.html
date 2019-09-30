@@ -1,0 +1,5 @@
+<ng-container *ngFor="let item of doneList | sort">
+  <ul>
+    <li appGetDate [date]='item.end' appChecked>{{item.name|transformTask:' - Super!'}}</li>
+  </ul>
+</ng-container>

@@ -1,0 +1,8 @@
+.cont{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.cont>input{
+  margin: 4px;
+}
